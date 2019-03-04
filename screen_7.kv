@@ -1,0 +1,270 @@
+#:import Toolbar kivymd.toolbar.Toolbar
+#:import NavigationDrawerIconButton kivymd.navigationdrawer.NavigationDrawerIconButton
+#:import Factory kivy.factory.Factory
+#:import Window kivy.core.window.Window
+#:import ScrollView kivy.uix.scrollview.ScrollView
+#:import Screen4 screen_4.Screen4
+#:import Screen7 screen_7.Screen7
+
+<Screen7@Screen>:
+    name:'screen_7'
+    BoxLayout:
+        orientation:'vertical'
+        BoxLayout:
+            orientation:'vertical'
+            Toolbar:
+                id: toolbar1
+                title: 'ELECTRONICS'
+                background_color:app.theme_cls.primary_dark
+                left_action_items: [['arrow-left', lambda x:root.chg_scr()]]
+            BoxLayout:
+                orientation:'vertical'
+                size_hint:1,None
+                padding:10,10
+                height:40
+                canvas:
+                    Color:
+                        rgba:1,1,1,1
+                    Rectangle:
+                        source:'cd24.jpg'
+                        size:self.size
+                        pos:self.pos
+                BoxLayout:
+                    orientation:'horizontal'
+                    size_hint: 1,None
+                    height:40
+                    padding:10,0
+                    NavigationDrawerIconButton:
+                        icon:'search'
+                        size_hint: None,None
+                        size:40,40
+                    BoxLayout:
+                        canvas:
+                            Color:
+                                rgba:1,1,1,1
+                            Rectangle:
+                                size:self.size
+                                pos:self.pos
+                        TextInput:
+                            id:sef
+                            hint_text:'SEARCH'
+                            size_hint: 0.3,None
+                            height:40
+                            on_text:Screen4.do_pass(self,sef.text)
+                            background_color: 0,0,0,0  
+                    NavigationDrawerIconButton:
+                        icon:'mic'
+                        size_hint: None,None
+                        size:40,40
+
+            BoxLayout:
+                ScrollView:
+                    BoxLayout:
+                        orientation:"vertical"
+                        size_hint_y:None
+                        height:Window.height * 2.3
+                        canvas:
+                            Color:
+                                rgba:1,1,1,1
+                            Rectangle:
+                                size:self.size
+                                pos:self.pos
+                                source:'asdfgh.jpg'
+                        BoxLayout:
+                            orientation:'horizontal'
+                            padding:10,10
+                                    
+                            BoxLayout:
+                                orientation:'vertical'
+                                        
+                                canvas:
+                                    Rectangle:
+                                        size:self.size
+                                        pos:self.pos
+                                    
+                                        source:'cd31.jpg'
+                                Button:
+                                    text:'Electric Circuits, \\n Components & Spares '
+                                    background_normal:'cd24.jpg'
+                                    size_hint_y:None
+                                    height:40
+                            BoxLayout:
+                                size_hint_x:0.05
+                            BoxLayout:
+                                orientation:'vertical'
+                                        
+                                canvas:
+                                    Rectangle:
+                                        size:self.size
+                                        pos:self.pos
+                                        source:'cd32.jpg'
+                                Button:
+                                    text:'Instrumentation & \\n Control Equipments'
+                                    background_normal:'cd24.jpg'
+                                    size_hint_y:None
+                                    height:40
+
+                        BoxLayout:
+                            orientation:'horizontal'
+                            padding:10,10
+                                    
+                            BoxLayout:
+                                orientation:'vertical'
+                                        
+                                canvas:
+                                    Rectangle:
+                                        size:self.size
+                                        pos:self.pos
+                                        source:'cd31.jpg'
+                                Button:
+                                    text:'Resistors & \\n Other Passive Devices '
+                                    background_normal:'cd24.jpg'
+                                    size_hint_y:None
+                                    height:40
+                            BoxLayout:
+                                size_hint_x:0.05
+                            BoxLayout:
+                                orientation:'vertical'
+                                        
+                                canvas:
+                                    Rectangle:
+                                        size:self.size
+                                        pos:self.pos
+                                        source:'cd32.jpg'
+                                Button:
+                                    text:'Diodes & Electronics \\n Active Diodes'
+                                    background_normal:'cd24.jpg'
+                                    size_hint_y:None
+                                    height:40
+                        BoxLayout:
+                            orientation:'horizontal'
+                            padding:10,10
+                                    
+                            BoxLayout:
+                                orientation:'vertical'
+                                        
+                                canvas:
+                                    Rectangle:
+                                        size:self.size
+                                        pos:self.pos
+                                        source:'cd40.jpg'
+                                Button:
+                                    text:'Optical,Laser \\n Instruments & Devices '
+                                    background_normal:'cd24.jpg'
+                                    size_hint_y:None
+                                    height:40
+                            BoxLayout:
+                                size_hint_x:0.05
+                            BoxLayout:
+                                orientation:'vertical'
+                                        
+                                canvas:
+                                    Rectangle:
+                                        size:self.size
+                                        pos:self.pos
+                                        source:'cd39.jpg'
+                                Button:
+                                    text:'Process Control & \\n Systems & Equipments'
+                                    background_normal:'cd24.jpg'
+                                    size_hint_y:None
+                                    height:40
+                                                
+                        BoxLayout:
+                            orientation:'horizontal'
+                            padding:10,10
+                                    
+                            BoxLayout:
+                                orientation:'vertical'
+                                        
+                                canvas:
+                                    Rectangle:
+                                        size:self.size
+                                        pos:self.pos
+                                        source:'cd38.jpg'
+                                Button:
+                                    text:'Voltage &\\n Power Stabilizers'
+                                    background_normal:'cd24.jpg'
+                                    size_hint_y:None
+                                    height:40
+                            BoxLayout:
+                                size_hint_x:0.05
+                            BoxLayout:
+                                orientation:'vertical'
+                                        
+                                canvas:
+                                    Rectangle:
+                                        size:self.size
+                                        pos:self.pos
+                                        source:'cd37.jpg'
+                                Button:
+                                    text:'Relays & \\n Contactors'
+                                    background_normal:'cd24.jpg'
+                                    size_hint_y:None
+                                    height:40
+                                
+                        BoxLayout:
+                            orientation:'horizontal'
+                            padding:10,10
+                                    
+                            BoxLayout:
+                                orientation:'vertical'
+                                        
+                                canvas:
+                                    Rectangle:
+                                        size:self.size
+                                        pos:self.pos
+                                        source:'cd36.jpg'
+                                Button:
+                                    text:'Sensors & \\n Transducers '
+                                    background_normal:'cd24.jpg'
+                                    size_hint_y:None
+                                    height:40
+                            BoxLayout:
+                                size_hint_x:0.05
+                            BoxLayout:
+                                orientation:'vertical'
+                                        
+                                canvas:
+                                    Rectangle:
+                                        size:self.size
+                                        pos:self.pos
+                                        source:'cd35.jpg'
+                                Button:
+                                    text:'GPS & \\n Navigation Devices'
+                                    background_normal:'cd24.jpg'
+                                    size_hint_y:None
+                                    height:40
+                        BoxLayout:
+                            orientation:'horizontal'
+                            padding:10,10
+                                    
+                            BoxLayout:
+                                orientation:'vertical'
+                                        
+                                canvas:
+                                    Rectangle:
+                                        size:self.size
+                                        pos:self.pos
+                                        source:'cd34.jpg'
+                                Button:
+                                    text:'PCB Module & \\n Circuit Board'
+                                    background_normal:'cd24.jpg'
+                                    size_hint_y:None
+                                    height:40
+                            BoxLayout:
+                                size_hint_x:0.05
+                            BoxLayout:
+                                orientation:'vertical'
+                                        
+                                canvas:
+                                    Rectangle:
+
+                                        size:self.size
+                                        pos:self.pos
+                                        source:'cd33.jpg'
+                                Button:
+                                    text:'Electrical & \\n Electronics Gadgets'
+                                    background_normal:'cd24.jpg'
+                                    size_hint_y:None
+                                    height:40
+

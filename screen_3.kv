@@ -1,0 +1,18 @@
+<Screen3@Screen>:
+    name: 'screen_3'
+
+    BoxLayout:
+        orientation: "vertical"
+	
+        Label:
+            text: "Screen 3"
+        Button:
+            text: "to main screen"
+            on_press: app.root.current = "main_screen"
+	    
+        Button:
+            text: "to screen 2"
+            on_press: app.root.current = "screen_2"
+        Button:
+            text: "press from screen 3"
+            on_press: root.do_try()

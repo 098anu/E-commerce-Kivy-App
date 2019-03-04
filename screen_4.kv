@@ -1,0 +1,124 @@
+#:import Toolbar kivymd.toolbar.Toolbar
+#:import NavigationDrawerIconButton kivymd.navigationdrawer.NavigationDrawerIconButton
+#:import Factory kivy.factory.Factory
+#:import Window kivy.core.window.Window
+#:import Screen4 screen_4.Screen4
+
+
+
+<Screen4@Screen>:
+    name:'screen_4'
+       
+    BoxLayout:
+                
+        orientation: 'vertical'
+        Toolbar:
+            id: toolbar
+            title: 'Welcome'
+            background_color:app.theme_cls.primary_dark
+            left_action_items: [['menu', lambda x: app.nav_drawer.toggle()]]
+            right_action_items: [['more-vert', lambda x: None]]
+        BoxLayout:
+            orientation:'vertical'
+            
+            canvas:
+                Color:
+                    rgba:1,1,1,1
+                Rectangle:
+                    source:'cd24.jpg'
+                    size:self.size
+                    pos:self.pos
+            BoxLayout:
+                orientation:'horizontal'
+                nav:nav              
+                size_hint:1,None
+                height:40
+                padding:10,10
+                canvas:
+                    Color:
+                        rgba:1,1,1,1
+                    Rectangle:
+                        source:'cd24.jpg'
+                        size:self.size
+                        pos:self.pos
+                NavigationDrawerIconButton:
+                    icon:'gps'
+                    width:40
+                    size_hint: None,None
+                    height:40
+                Button:
+                    height:40
+                    id:nav
+                    size_hint_y:None
+                    halign: "center"
+                    valign: "center"
+                    text:'DETECT LOCATION'
+                    shorten:True
+                    text_size:self.size
+                    background_normal:'wer.jpg'
+                    color:0,0,0,1
+                    on_press:root.detect()                            
+                        
+                        
+            BoxLayout:
+                orientation:'horizontal'
+                size_hint: 1,None
+                height:40
+                padding:10,0
+                        
+                NavigationDrawerIconButton:
+                    icon:'search'
+                    size_hint: None,None
+                            
+                    size:40,40
+                BoxLayout:
+                           
+                            
+                    canvas:
+                        Color:
+                            rgba:1,1,1,1
+                        Rectangle:
+                            size:self.size
+                            pos:self.pos
+                    TextInput:
+                        id:se
+                        hint_text:'SEARCH PRODUCT'
+                        size_hint: 0.3,None
+                        height:40
+                        markup:True
+                        shorten:True
+                        multiline:False
+                        on_text:root.do_pass(se.text)                                
+                        background_color: 0,0,0,0  
+
+                            
+                                
+                NavigationDrawerIconButton:
+                    icon:'mic'
+                    size_hint: None,None
+                            
+                    size:40,40
+            BoxLayout:
+                size_hint_y:None
+                height:10
+                canvas:
+                    Color:
+                        rgba:1,1,1,1
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:'cd24.jpg'
+                        
+            BoxLayout:
+                id:bxtry
+                orientation:'vertical'
+                padding:10,10
+                canvas:
+                    Color:
+                        rgba:1,1,1,1
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:'gh.jpg'
+                size_hint_y:0.9
+                        

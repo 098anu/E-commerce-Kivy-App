@@ -1,0 +1,126 @@
+#:import Toolbar kivymd.toolbar.Toolbar
+#:import ScrollView kivy.uix.scrollview.ScrollView
+#:import NavigationDrawerIconButton kivymd.navigationdrawer.NavigationDrawerIconButton
+#:import Screen12 screen_12.Screen12
+#:import MDFloatingActionButton kivymd.button.MDFloatingActionButton
+#: import SingleLineTextField kivymd.textfields.SingleLineTextField
+<Screen12@Screen>:
+    name:'screen_12'
+    BoxLayout:
+        orientation:'vertical'
+        BoxLayout:
+            orientation:'vertical'
+            Toolbar:
+                id: toolbar1
+                title: 'TRY SELLING'
+                background_color:app.theme_cls.primary_dark
+                left_action_items: [['arrow-left', lambda x: root.chg_scr()]]
+                    
+            BoxLayout:
+                        
+                orientation:'vertical'
+                padding:5,20
+                BoxLayout:
+                    size_hint:1,None
+                    height:40
+                    padding:10,0
+                            
+                        
+                    MDFloatingActionButton:
+                                
+                        icon:'collection-item-1'
+                        id:fa1
+                        background_normal:'cd24.jpg'
+                        size_hint:None,None
+                        height:40
+                        width:40
+                            
+                    BoxLayout:
+                        size_hint:None,None
+                        width:1
+                        height:40
+                    BoxLayout:
+                        size_hint:None,None
+                        width:40
+                        height:40
+                                
+                        NavigationDrawerIconButton:
+                            icon:'long-arrow-right'
+                            pos_hint:{"center_x":0.5,"center_y":0.5}
+                            size_hint:1,None
+                                        
+                    MDFloatingActionButton:
+                        icon:'collection-item-2'
+                                
+                        size_hint:None,None
+                        height:40
+                        width:40
+                    BoxLayout:
+                        size_hint:None,None
+                        width:1
+                        height:50
+                    BoxLayout:
+                        size_hint:None,None
+                        width:40
+                        height:40
+                                
+                        NavigationDrawerIconButton:
+                            icon:'long-arrow-right'
+                            pos_hint:{"center_x":0.5,"center_y":0.5}
+                            size_hint:1,None
+                    MDFloatingActionButton:
+                        icon:'collection-item-3'
+                        size_hint:None,None
+                                
+                        height:40
+                        width:40
+                    BoxLayout:
+                        size_hint:None,None
+                        width:1
+                        height:40
+                    BoxLayout:
+                        size_hint:None,None
+                        width:40
+                        height:40
+                                
+                        NavigationDrawerIconButton:
+                            icon:'long-arrow-right'
+                                    
+                            size_hint:1,None
+                    MDFloatingActionButton:
+                        icon:'collection-item-4'
+                        size_hint:None,None
+                                
+                        height:40
+                        width:40
+                BoxLayout:
+                    size_hint_y:0.9
+                    orientation:'vertical'
+                    padding:20,10
+                    MDFlatButton:
+                        text:'''Comapny \nName'''
+                        color:0,0,0,1
+                        size_hint:0.1,0.7
+                    BoxLayout:
+                        size_hint_y:0.6
+                    Label:
+                        text:"        Hi User, start your journey\nin India's largest online market place"
+                        color:0,0,0,1
+                        markup:True
+                    SingleLineTextField:
+                        hint_text:'Company Name'
+                        pos_hint:{"center_x":0.5,"center_y":0.5}
+                        size_hint_x:0.8
+                    BoxLayout:
+                        size_hint_y:0.7
+                    MDFillRoundFlatButton:
+                        pos_hint:{"center_x":0.5,"center_y":0.5}
+                        text:'NEXT'
+                        color:1,1,1,1
+                        size_hint:0.8,0.7
+                        on_press:app.root.current='screen_13'
+                            
+                            
+                BoxLayout:
+                    size_hint_y:0.5
+                            

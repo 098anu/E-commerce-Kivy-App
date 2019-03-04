@@ -1,0 +1,166 @@
+#:import Toolbar kivymd.toolbar.Toolbar
+#:import ScrollView kivy.uix.scrollview.ScrollView
+#:import NavigationDrawerIconButton kivymd.navigationdrawer.NavigationDrawerIconButton
+#:import Screen13 screen_13.Screen13
+#:import MDFloatingActionButton kivymd.button.MDFloatingActionButton
+#:import SingleLineTextField kivymd.textfields.SingleLineTextField
+
+<Screen14@Screen>:
+    name:'screen_14'
+    BoxLayout:
+        orientation:'vertical'
+        BoxLayout:
+            orientation:'vertical'
+            Toolbar:
+                id: toolbar1
+                title: 'ADD GSTIN'
+                background_color:app.theme_cls.primary_dark
+                left_action_items: [['arrow-left', lambda x: root.chg_scr()]]
+                    
+            BoxLayout:
+                pos_hint:{"center_x":0.5,"center_y":0.5}
+                orientation:'vertical'
+                padding:5,20
+                BoxLayout:
+                    size_hint:1,None
+                    height:40
+                    padding:10,0
+                    pos_hint:{"center_x":0.5,"center_y":0.5}
+                    MDFloatingActionButton:
+                        pos_hint:{"center_x":0.5,"center_y":0.5}
+                        icon:'check'
+                        id:fa1
+                        background_normal:'cd24.jpg'
+                        size_hint:None,None
+                        height:40
+                        width:40
+                            
+                    BoxLayout:
+                        size_hint:None,None
+                        width:1
+                        height:40
+                    BoxLayout:
+                        size_hint:None,None
+                        width:40
+                        height:40
+                        pos_hint:{"center_x":0.5,"center_y":0.5}
+                        NavigationDrawerIconButton:
+                            icon:'long-arrow-right'
+                            pos_hint:{"center_x":0.5,"center_y":0.5}
+                            size_hint:1,None
+                                        
+                    MDFloatingActionButton:
+                        icon:'check'
+                        pos_hint:{"center_x":0.5,"center_y":0.5}
+                        size_hint:None,None
+                        height:40
+                        width:40
+                    BoxLayout:
+                        size_hint:None,None
+                        width:1
+                        height:50
+                    BoxLayout:
+                        size_hint:None,None
+                        width:40
+                        height:40
+                        pos_hint:{"center_x":0.5,"center_y":0.5}
+                        NavigationDrawerIconButton:
+                            icon:'long-arrow-right'
+                            pos_hint:{"center_x":0.5,"center_y":0.5}
+                            size_hint:1,None
+                    MDFloatingActionButton:
+                        icon:'collection-item-3'
+                        size_hint:None,None
+                        pos_hint:{"center_x":0.5,"center_y":0.5}
+                        height:40
+                        width:40
+                    BoxLayout:
+                        size_hint:None,None
+                        width:1
+                        height:40
+                    BoxLayout:
+                        size_hint:None,None
+                        width:40
+                        height:40
+                        pos_hint:{"center_x":0.5,"center_y":0.5}
+                        NavigationDrawerIconButton:
+                            icon:'long-arrow-right'
+                            pos_hint:{"center_x":0.5,"center_y":0.5}
+                            size_hint:1,None
+                    MDFloatingActionButton:
+                        icon:'collection-item-4'
+                        size_hint:None,None
+                        pos_hint:{"center_x":0.5,"center_y":0.5}
+                        height:40
+                        width:40
+
+                BoxLayout:
+                    size_hint_y:0.9
+                    orientation:'vertical'
+                    padding:20,10
+                    MDFlatButton:
+                        padding:80,10
+                        text:'                           ADD\n                          GSTIN'
+                        color:0,0,0,1
+                        size_hint:1,0.7
+                    BoxLayout:
+                        size_hint_y:0.3
+                            
+                    Label:
+                        text:"       Add  your updated \nGSTIN to be a verified seller"
+                        color:0,0,0,1
+                        markup:True
+                    BoxLayout:
+                        orientation:'horizontal'
+                        BoxLayout:
+                            size_hint_x:0.2
+                            CheckBox:
+                                group: 'check'
+                                id: gst
+                                color:0,0,0,1
+                                size_hint_x:0.2
+                        BoxLayout:
+                            size_hint_x:0.3
+                            Label:
+                                text:'I Have GST'
+                                color:0,0,0,1
+                                size_hint_x:0.2
+                        BoxLayout:
+                            size_hint_x:0.4
+                                    
+                                
+                    SingleLineTextField:
+                        hint_text:'GST*'
+                        pos_hint:{"center_x":0.5,"center_y":0.5}
+                        size_hint_x:0.8
+                    BoxLayout:
+                        orientation:'horizontal'
+                        BoxLayout:
+                            size_hint_x:0.2
+                            CheckBox:
+                                group: 'check'
+                                id: gst
+                                color:0,0,0,1
+                                size_hint_x:0.2
+                        BoxLayout:
+                            size_hint_x:0.3
+                            Label:
+                                text:'I will update later'
+                                color:0,0,0,1
+                                size_hint_x:0.2
+                        BoxLayout:
+                            size_hint_x:0.4
+                            
+                    BoxLayout:
+                        size_hint_y:0.7
+                    MDFillRoundFlatButton:
+                        pos_hint:{"center_x":0.5,"center_y":0.5}
+                        text:'NEXT'
+                        color:1,1,1,1
+                        size_hint:0.8,0.6
+                        on_press:app.root.current='screen_15'
+                            
+                            
+                BoxLayout:
+                    size_hint_y:0.1
+                        

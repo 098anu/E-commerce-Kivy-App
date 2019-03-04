@@ -1,0 +1,12 @@
+<Screen1@Screen>:
+    name:'screen_1'
+    BoxLayout:
+        name:'Screen1'
+        canvas.after:
+            Rectangle:
+                source:'cd20.jpg'
+                pos:self.pos
+                size:self.size
+        Button:
+            on_press:
+                app.root.current = "screen_4"

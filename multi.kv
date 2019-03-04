@@ -1,0 +1,99 @@
+#:include screen_1.kv
+
+#:include screen_6.kv
+#:include screen_4.kv
+#:include navigate.kv
+#:include screen_5.kv
+#:include screen_20.kv
+#:include screen_8.kv
+#:include screen_7.kv
+#:include screen_9.kv
+#:include screen_10.kv
+#:include screen_12.kv
+#:include screen_11.kv
+#:include screen_13.kv
+#:include screen_14.kv
+#:include screen_15.kv
+#:include navigatesa.kv
+#:include screen_16.kv
+#:include screen_17.kv
+#:include screen_18.kv
+#:import NoTransition kivy.uix.screenmanager.NoTransition
+
+
+ScreenManager:
+    transition: NoTransition()
+
+
+    Screen:
+        name: "main_screen"
+
+        BoxLayout:
+            orientation: "vertical"
+            
+            Label:
+                text: "main screen"
+            Button:
+                text: "to screen 1"
+                on_press: app.root.current = "screen_1"
+            Button:
+                text: "to screen 5"
+                on_press: app.root.current = "screen_5"
+	    
+            Button:
+                text: "to screen 6"
+                on_press: app.root.current = "screen_6"
+            Button:
+                text: "to screen 4"
+                on_press: app.root.current = "screen_4"
+
+	   
+
+
+    Screen1:
+
+    Screen5:
+
+    Screen6:
+
+    Screen4:
+        id:scr4
+
+    Screen20:
+        id:scr20
+    Screen7:
+
+    Screen8:
+
+    Screen9:
+
+    Screen10:
+
+    Screen11:
+
+    Screen12:
+
+    Screen13:
+
+    Screen14:
+
+    Screen15:
+        id:scr15
+    
+
+    Screen16:
+
+    Screen17:
+
+    Screen18:
+
+
+
+
+
+
+
+        
+
+        
+  

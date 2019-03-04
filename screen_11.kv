@@ -1,0 +1,163 @@
+#:import Toolbar kivymd.toolbar.Toolbar
+#:import NavigationDrawerIconButton kivymd.navigationdrawer.NavigationDrawerIconButton
+#:import Factory kivy.factory.Factory
+#:import Window kivy.core.window.Window
+#:import ScrollView kivy.uix.scrollview.ScrollView
+#:import Screen4 screen_4.Screen4
+#:import Screen11 screen_11.Screen11
+<Screen11@Screen>:
+    name:'screen_11'
+    BoxLayout:
+        orientation:'vertical'
+        BoxLayout:
+            orientation:'vertical'
+            Toolbar:
+                id: toolbar1
+                title: 'GROCERY'
+                background_color:app.theme_cls.primary_dark
+                left_action_items: [['arrow-left', lambda x: root.chg_scr()]]
+            BoxLayout:
+                orientation:'vertical'
+                size_hint:1,None
+                padding:10,10
+                height:40
+                canvas:
+                    Color:
+                        rgba:1,1,1,1
+                    Rectangle:
+                        source:'cd24.jpg'
+                        size:self.size
+                        pos:self.pos
+                BoxLayout:
+                    orientation:'horizontal'
+                    size_hint: 1,None
+                    height:40
+                    padding:10,0
+                    NavigationDrawerIconButton:
+                        icon:'search'
+                        size_hint: None,None
+                        size:40,40
+                    BoxLayout:
+                        canvas:
+                            Color:
+                                rgba:1,1,1,1
+                            Rectangle:
+                                size:self.size
+                                pos:self.pos
+                        TextInput:
+                            id:sef
+                            hint_text:'SEARCH'
+                            size_hint: 0.3,None
+                            height:40
+                            on_text:Screen4.do_pass(self,sef.text)
+                            background_color: 0,0,0,0  
+                    NavigationDrawerIconButton:
+                        icon:'mic'
+                        size_hint: None,None
+                        size:40,40
+            BoxLayout:
+                ScrollView:
+                    BoxLayout:
+                        orientation:"vertical"
+                        size_hint_y:None
+                        height:Window.height * 1.3
+                        BoxLayout:
+                            orientation:'horizontal'
+                            padding:10,10
+                                    
+                            BoxLayout:
+                                orientation:'vertical'
+                                        
+                                canvas:
+                                    Rectangle:
+                                        size:self.size
+                                        pos:self.pos
+                                        
+                                        source:'g1.jpg'
+                                Button:
+                                    text:'Staples'
+                                    background_normal:'cd24.jpg'
+                                    size_hint_y:None
+                                    height:40
+                            BoxLayout:
+                                size_hint_x:0.05
+                            BoxLayout:
+                                orientation:'vertical'
+                                        
+                                canvas:
+                                    Rectangle:
+                                        size:self.size
+                                        pos:self.pos
+                                        source:'g2.jpg'
+                                Button:
+                                    text:'Snacks & Beverages'
+                                    background_normal:'cd24.jpg'
+                                    size_hint_y:None
+                                    height:40
+
+                        BoxLayout:
+                            orientation:'horizontal'
+                            padding:10,10
+                                    
+                            BoxLayout:
+                                orientation:'vertical'
+                                        
+                                canvas:
+                                    Rectangle:
+                                        size:self.size
+                                        pos:self.pos
+                                        source:'g4.png'
+                                Button:
+                                    text:'Packaged Food '
+                                    background_normal:'cd24.jpg'
+                                    size_hint_y:None
+                                    height:40
+                            BoxLayout:
+                                size_hint_x:0.05
+                            BoxLayout:
+                                orientation:'vertical'
+                                        
+                                canvas:
+                                    Rectangle:
+                                        size:self.size
+                                        pos:self.pos
+                                        source:'g5.jpg'
+                                Button:
+                                    text:'Personal &\\nBaby Care'
+                                    background_normal:'cd24.jpg'
+                                    size_hint_y:None
+                                    height:40
+                        BoxLayout:
+                            orientation:'horizontal'
+                            padding:10,10
+                                    
+                            BoxLayout:
+                                orientation:'vertical'
+                                        
+                                canvas:
+                                    Rectangle:
+                                        size:self.size
+                                        pos:self.pos
+                                        source:'g6.jpg'
+                                Button:
+                                    text:'Household care'
+                                    background_normal:'cd24.jpg'
+                                    size_hint_y:None
+                                    height:40
+                            BoxLayout:
+                                size_hint_x:0.05
+                            BoxLayout:
+                                orientation:'vertical'
+                                        
+                                canvas:
+                                    Rectangle:
+                                        size:self.size
+                                        pos:self.pos
+                                        source:'g7.jpg'
+                                Button:
+                                    text:'Dairy & eggs'
+                                    background_normal:'cd24.jpg'
+                                    size_hint_y:None
+                                    height:40
+                                                
+

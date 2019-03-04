@@ -1,0 +1,48 @@
+#:import Screen5 screen_5.Screen5
+#:import Factory kivy.factory.Factory
+#:import Window kivy.core.window.Window
+#: import ListAdapter kivy.adapters.listadapter.ListAdapter
+#: import ListItemButton kivy.uix.listview.ListItemButton
+#:import NavigationDrawerIconButton kivymd.navigationdrawer.NavigationDrawerIconButton
+<ListItemButton>:
+    selected_color: 0,0,0,0
+    deselected_color: 0,0,0,0
+    color:0,0,0,1
+<Screen5@Screen>:
+    name:'screen_5'
+    BoxLayout:
+        orientation:'vertical'
+        padding:10,10
+
+        BoxLayout:
+            size_hint:1,None
+            height:40
+            NavigationDrawerIconButton:
+                icon:'arrow-left'
+                on_press:app.root.current = "screen_4"
+                size_hint_x:None
+                width:40
+            TextInput:
+                hint_text:'SEARCH LOCATION'
+                id:loc
+                focus:True
+                background_color:0,0,0,0
+                on_text:root.update(loc.text)
+                canvas.before:
+                            
+                    Line:
+                        points: self.x , self.y, self.x + self.width - 20, self.y
+                        width: 1
+
+                                
+                            
+        BoxLayout:
+            size_hint_Y:0.9
+            orientation:'vertical'
+            size_hint_y:0.9
+                    
+            ListView:
+                id:loclist
+                adapter:
+                    ListAdapter(data=[],cls=ListItemButton)
+                    
